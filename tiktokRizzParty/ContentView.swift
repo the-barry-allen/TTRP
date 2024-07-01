@@ -26,7 +26,7 @@ struct ContentView: View {
 
             UploadView()
                 .tabItem {
-                    CustomTabIcon()
+                    Image(systemName: "plus.app.fill")
                 }
                 .tag(2)
 
@@ -49,21 +49,6 @@ struct ContentView: View {
     }
 }
 
-struct CustomTabIcon: View {
-    var body: some View {
-        ZStack {
-            // Your complex icon composition
-            Image(systemName: "circle.fill")
-                .resizable()
-                .frame(width: 24, height: 24)
-                .foregroundColor(.blue)
-            Image(systemName: "plus")
-                .resizable()
-                .frame(width: 12, height: 12)
-                .foregroundColor(.white)
-        }
-    }
-}
 
 #Preview {
     ContentView()
