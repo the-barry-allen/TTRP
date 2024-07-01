@@ -9,10 +9,14 @@ import SwiftUI
 
 struct UploadView: View {
     var body: some View {
-        Text("Upload")
-            .font(.largeTitle)
-            .foregroundColor(.white)
-            .background(Color.black.edgesIgnoringSafeArea(.all))
+        VStack{
+            Text("Upload")
+                .font(.largeTitle)
+                .foregroundColor(.white)
+                .background(Color.black.edgesIgnoringSafeArea(.all))
+        }
+        .containerRelativeFrame([.horizontal, .vertical])
+        .background(.black)
     }
 }
 

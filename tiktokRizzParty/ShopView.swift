@@ -9,10 +9,14 @@ import SwiftUI
 
 struct ShopView: View {
     var body: some View {
-        Text("Shop")
-            .font(.largeTitle)
-            .foregroundColor(.white)
-            .background(Color.black.edgesIgnoringSafeArea(.all))
+        VStack{
+            Text("Shop")
+                .font(.largeTitle)
+                .foregroundColor(.white)
+                .background(Color.black.edgesIgnoringSafeArea(.all))
+        }
+        .containerRelativeFrame([.horizontal, .vertical])
+        .background(.black)
     }
 }
 

@@ -9,11 +9,14 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text("Home")
-            .font(.largeTitle)
-            .foregroundColor(.white)
-            .background(Color.black.edgesIgnoringSafeArea(.all))
-    
+        VStack{
+            Text("Home")
+                .font(.largeTitle)
+                .foregroundColor(.white)
+                .background(Color.black.edgesIgnoringSafeArea(.all))
+        }
+        .containerRelativeFrame([.horizontal, .vertical])
+        .background(.black)
     }
 }
 

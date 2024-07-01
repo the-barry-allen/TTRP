@@ -9,10 +9,14 @@ import SwiftUI
 
 struct MessagesView: View {
     var body: some View {
-        Text("Messages")
-            .font(.largeTitle)
-            .foregroundColor(.white)
-            .background(Color.black.edgesIgnoringSafeArea(.all))
+        VStack{
+            Text("Messages")
+                .font(.largeTitle)
+                .foregroundColor(.white)
+                .background(Color.black.edgesIgnoringSafeArea(.all))
+        }
+        .containerRelativeFrame([.horizontal, .vertical])
+        .background(.black)
     }
 }
 

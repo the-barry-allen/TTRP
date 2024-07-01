@@ -5,8 +5,7 @@ struct ContentView: View {
 
     init() {
         UITabBar.appearance().barTintColor = UIColor.black
-        UITabBar.appearance().unselectedItemTintColor = UIColor.white.withAlphaComponent(0.6)
-        UITabBar.appearance().isTranslucent = false
+        UITabBar.appearance().isTranslucent = true
     }
 
     var body: some View {
@@ -27,9 +26,7 @@ struct ContentView: View {
 
             UploadView()
                 .tabItem {
-                    Image(systemName: "plus.app.fill")
-                        .foregroundColor(.blue)
-
+                    CustomTabIcon()
                 }
                 .tag(2)
 
@@ -52,6 +49,21 @@ struct ContentView: View {
     }
 }
 
+struct CustomTabIcon: View {
+    var body: some View {
+        ZStack {
+            // Your complex icon composition
+            Image(systemName: "circle.fill")
+                .resizable()
+                .frame(width: 24, height: 24)
+                .foregroundColor(.blue)
+            Image(systemName: "plus")
+                .resizable()
+                .frame(width: 12, height: 12)
+                .foregroundColor(.white)
+        }
+    }
+}
 
 #Preview {
     ContentView()

@@ -9,10 +9,14 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        Text("Profile")
-            .font(.largeTitle)
-            .foregroundColor(.white)
-            .background(Color.black.edgesIgnoringSafeArea(.all))
+        VStack{
+            Text("Profile")
+                .font(.largeTitle)
+                .foregroundColor(.white)
+                .background(Color.black.edgesIgnoringSafeArea(.all))
+        }
+        .containerRelativeFrame([.horizontal, .vertical])
+        .background(.black)
     }
 }
 
