@@ -15,14 +15,14 @@ struct ContentView: View {
                     Image(systemName: "house.fill")
                     Text("Home")
                 }
-                .tag(0)
+                .tag(1)
 
             ShopView()
                 .tabItem {
                     Image(systemName: "bag.fill")
                     Text("Shop")
                 }
-                .tag(1)
+                .tag(0)
 
             UploadView()
                 .tabItem {
