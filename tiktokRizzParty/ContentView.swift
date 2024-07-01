@@ -18,7 +18,7 @@ struct ContentView: View {
                 }
                 .tag(0)
 
-            DiscoverView()
+            ShopView()
                 .tabItem {
                     Image(systemName: "bag.fill")
                     Text("Shop")
@@ -52,50 +52,6 @@ struct ContentView: View {
     }
 }
 
-struct HomeView: View {
-    var body: some View {
-        Text("Home")
-            .font(.largeTitle)
-            .foregroundColor(.white)
-            .background(Color.black.edgesIgnoringSafeArea(.all))
-    }
-}
-
-struct DiscoverView: View {
-    var body: some View {
-        Text("Discover")
-            .font(.largeTitle)
-            .foregroundColor(.white)
-            .background(Color.black.edgesIgnoringSafeArea(.all))
-    }
-}
-
-struct UploadView: View {
-    var body: some View {
-        Text("Upload")
-            .font(.largeTitle)
-            .foregroundColor(.white)
-            .background(Color.black.edgesIgnoringSafeArea(.all))
-    }
-}
-
-struct MessagesView: View {
-    var body: some View {
-        Text("Messages")
-            .font(.largeTitle)
-            .foregroundColor(.white)
-            .background(Color.black.edgesIgnoringSafeArea(.all))
-    }
-}
-
-struct ProfileView: View {
-    var body: some View {
-        Text("Profile")
-            .font(.largeTitle)
-            .foregroundColor(.white)
-            .background(Color.black.edgesIgnoringSafeArea(.all))
-    }
-}
 
 #Preview {
     ContentView()
