@@ -4,8 +4,13 @@ struct ContentView: View {
     @State private var selectedTab = 0
 
     init() {
-        UITabBar.appearance().barTintColor = UIColor.black
-        UITabBar.appearance().isTranslucent = true
+        let appearance = UITabBarAppearance()
+        appearance.backgroundColor = UIColor.black
+        UITabBar.appearance().standardAppearance = appearance
+        if #available(iOS 15.0, *) {
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+        }
+        UITabBar.appearance().isTranslucent = false
     }
 
     var body: some View {
@@ -26,7 +31,9 @@ struct ContentView: View {
 
             UploadView()
                 .tabItem {
-                    Image(systemName: "plus.app.fill")
+                    Image("upload_icon")
+                        .resizable()
+                        .frame(width: 20, height: 20)
                 }
                 .tag(2)
 
@@ -45,10 +52,8 @@ struct ContentView: View {
                 .tag(4)
         }
         .accentColor(.white) // Tab bar icon and text color when selected
-        .background(Color.black.edgesIgnoringSafeArea(.all)) // Background color for the tab bar
     }
 }
-
 
 #Preview {
     ContentView()
