@@ -12,6 +12,7 @@
 		855856B62C3251990065DF48 /* UploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855856B52C3251990065DF48 /* UploadView.swift */; };
 		855856B82C3251EE0065DF48 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855856B72C3251EE0065DF48 /* MessagesView.swift */; };
 		855856BA2C3251F50065DF48 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855856B92C3251F50065DF48 /* ProfileView.swift */; };
+		855856BF2C33EDD40065DF48 /* fyp_page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855856BE2C33EDD40065DF48 /* fyp_page.swift */; };
 		85FEA74F2C2E8E6300189C98 /* tiktokRizzPartyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FEA74E2C2E8E6300189C98 /* tiktokRizzPartyApp.swift */; };
 		85FEA7512C2E8E6300189C98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FEA7502C2E8E6300189C98 /* ContentView.swift */; };
 		85FEA7532C2E8E6400189C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85FEA7522C2E8E6400189C98 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		855856B52C3251990065DF48 /* UploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadView.swift; sourceTree = "<group>"; };
 		855856B72C3251EE0065DF48 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		855856B92C3251F50065DF48 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		855856BE2C33EDD40065DF48 /* fyp_page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fyp_page.swift; sourceTree = "<group>"; };
 		85FEA74B2C2E8E6300189C98 /* tiktokRizzParty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tiktokRizzParty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85FEA74E2C2E8E6300189C98 /* tiktokRizzPartyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tiktokRizzPartyApp.swift; sourceTree = "<group>"; };
 		85FEA7502C2E8E6300189C98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		855856BB2C33ECED0065DF48 /* FYP_Pages */ = {
+			isa = PBXGroup;
+			children = (
+				855856BE2C33EDD40065DF48 /* fyp_page.swift */,
+			);
+			path = FYP_Pages;
+			sourceTree = "<group>";
+		};
 		85FEA7422C2E8E6300189C98 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 				85FEA74E2C2E8E6300189C98 /* tiktokRizzPartyApp.swift */,
 				85FEA7502C2E8E6300189C98 /* ContentView.swift */,
 				855856B12C3250FF0065DF48 /* HomeView.swift */,
+				855856BB2C33ECED0065DF48 /* FYP_Pages */,
 				855856B32C32516B0065DF48 /* ShopView.swift */,
 				855856B52C3251990065DF48 /* UploadView.swift */,
 				855856B72C3251EE0065DF48 /* MessagesView.swift */,
@@ -158,6 +169,7 @@
 				85FEA7512C2E8E6300189C98 /* ContentView.swift in Sources */,
 				855856B42C32516B0065DF48 /* ShopView.swift in Sources */,
 				855856BA2C3251F50065DF48 /* ProfileView.swift in Sources */,
+				855856BF2C33EDD40065DF48 /* fyp_page.swift in Sources */,
 				85FEA74F2C2E8E6300189C98 /* tiktokRizzPartyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

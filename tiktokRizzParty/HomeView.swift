@@ -12,15 +12,9 @@ struct HomeView: View {
     var body: some View {
         // Using SwipeView to create a swipeable view with different colored pages
         SwipeView(pages: [
-            Color.red,
-            Color.green,
-            Color.blue,
-            Color.yellow,
-            Color.orange,
-            Color.brown,
-            Color.pink,
-            Color.indigo,
-            Color.cyan,
+            FYPPage(isBdayPage: false),
+            FYPPage(isBdayPage: false),
+            FYPPage(isBdayPage: true)
         ])
     }
 }
@@ -60,9 +54,6 @@ struct SwipeView<Content: View>: View {
     }
 }
 
-// Preview provider for the ContentView
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }
