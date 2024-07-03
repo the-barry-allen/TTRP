@@ -7,21 +7,37 @@
 
 import SwiftUI
 
+struct Product {
+    var name: String
+    var item: String
+    var price: String
+}
+
+let products = [
+    Product(name: "Blue and White Sneakers NEW", item: "ShopViewSampleProduct" , price: "$69.99"),
+    Product(name: "Blue and White Sneakers OLD", item: "ShopViewSampleProduct" , price: "$69.99"),
+    Product(name: "Blue and White Sneakers What", item: "ShopViewSampleProduct" , price: "$69.99"),
+    Product(name: "Blue and White Sneakers Fuck", item: "ShopViewSampleProduct" , price: "$69.99"),
+   
+    
+]
+
 struct ShopView: View {
     var body: some View {
-        NavigationView {
             VStack (alignment: .leading) {
                 ShoppingListHeader()
                 ScrollView {
                     VStack(alignment: .leading) {
                         SearchBar()
-                        BrowseListContainer()
-                        CategoryGrid(products: products)
+                        TabberView()
+                        TopPicksView()
+                        RecoItemsView(products: products)
                     }
                     .padding()
                 }
             }
-        }
+            .background(.black)
+        
     }
 }
 
@@ -52,6 +68,7 @@ struct ShoppingListHeader: View {
         }
         .padding()
         .frame(height: 30)
+        .foregroundColor(.white)
     }
 }
 
@@ -66,6 +83,7 @@ struct SearchBar: View {
                 .padding(10)
                 .background(Color(.systemGray6))
                 .cornerRadius(10)
+                .foregroundColor(.gray)
             Spacer()
             Image(systemName: "slider.horizontal.3")
                             .foregroundColor(.gray)
@@ -74,12 +92,61 @@ struct SearchBar: View {
     }
 }
 
+struct TabberView: View {
+    var body: some View {
+        VStack {
+            // Scrollable View with Page Indicators
+            TabView {
+                BrowseListContainer()
+                CollaborationCardView()
+                // Add more views here if needed
+            }
+            .tabViewStyle(PageTabViewStyle())
+            .frame(height: 200) // Adjust the height as needed
+        }
+    }
+}
+
+struct CollaborationCardView: View {
+    var body: some View {
+        VStack{
+            HStack {
+                Text("Collaboration Made Easy")
+                    .font(.system(size: 20))
+                    .bold()
+                    .padding()
+                Spacer()
+                ZStack {
+                    Image(systemName: "person.2")
+                        .font(.system(size: 20))
+                    
+                    Image(systemName: "plus")
+                        .font(.system(size: 10))
+                        .bold()
+                        .padding(EdgeInsets(top: 20, leading: 30, bottom: 0, trailing: 0))// Smaller size for the plus
+                    
+                }
+                    .frame(width: 100, height: 50)
+                    .background(Color(.systemGray4))
+                    .cornerRadius(10)
+                    .padding()
+            }
+            Text("Add friends to shop on the same list, so everyone is on the same page!")
+                .font(.system(size: 15))
+                .padding(EdgeInsets(top: 0, leading: 5, bottom: 5, trailing: 5))
+        }
+        .frame(height: 180)
+        .background(.gray)
+        .cornerRadius(10)
+        .padding()
+    }
+}
 struct BrowseListContainer: View {
     var body: some View {
         VStack{
             HStack {
                 Text("Browse shortlisted items")
-                    .font(.system(size: 23))
+                    .font(.system(size: 20))
                     .bold()
                     .padding()
                 Spacer()
@@ -93,37 +160,100 @@ struct BrowseListContainer: View {
                 .font(.system(size: 15))
                 .padding(EdgeInsets(top: 0, leading: 5, bottom: 5, trailing: 5))
         }
-        .background(Color(.systemGray6))
+        .frame(height: 180)
+        .background(.gray)
         .cornerRadius(10)
+        .padding()
     }
 }
 
-struct Product {
-    var name: String
-    var item: String
-    var price: String
+struct TopPicksView: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            // Top Picks Section
+            Text("Shortlist")
+                .font(.title)
+                .padding(.horizontal)
+                .foregroundColor(.white)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 20) {
+                    ForEach(products, id: \.name) { product in
+                        ProductView(imageName: product.item , price: product.price)
+                    }
+                }
+                .padding(.horizontal)
+            }
+            .padding(.horizontal)
+            .cornerRadius(10)
+        }
+    }
 }
 
-let products = [
-    Product(name: "Blue and White Sneakers NEW", item: "ShopViewSampleProduct" , price: "$69.99"),
-]
+struct ProductView: View {
+    var imageName: String
+    var price: String
 
+    var body: some View {
+        VStack (alignment: .leading) {
+            Image(imageName)
+                .resizable()
+                .frame(width: 100, height: 100)
+                .cornerRadius(10)
+            Text(price)
+                
+        }
+        .padding()
+        .background(.white)
+        .cornerRadius(10)
+        .shadow(radius: 5)
+    }
+}
 
-struct CategoryGrid: View {
+struct RecoItemsView: View {
     let products: [Product]
     
     var body: some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))]) {
+        // Recommended Items Section
+        Text("Recommended Items")
+            .font(.title)
+            .padding(.horizontal)
+            .foregroundColor(.gray)
+    let adaptiveColumns = [
+        GridItem(.adaptive(minimum: 170))
+        ]
+
+        LazyVGrid(columns: adaptiveColumns, spacing: 20) {
             ForEach(products, id: \.name) { product in
-                VStack {
-                    Image(product.item)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 300, height: 200)
-                    Text(product.name)
-                }
+                RecommendedItemView(imageName: product.item, title: product.name, price: product.price)
             }
         }
+    }
+}
+
+struct RecommendedItemView: View {
+    var imageName: String
+    var title: String
+    var price: String
+
+    var body: some View {
+        VStack {
+            Image(imageName)
+                .resizable()
+                .frame(width: 100, height: 100)
+            Text(title)
+                .font(.headline)
+            Text(price)
+                .font(.subheadline)
+            Spacer()
+            Button(action: {}) {
+                Image(systemName: "cart")
+                    .padding()
+            }
+        }
+        .frame(height: 200)
+        .cornerRadius(10)
+        .shadow(radius: 5)
     }
 }
 
