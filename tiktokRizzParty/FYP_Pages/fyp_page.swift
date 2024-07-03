@@ -8,7 +8,7 @@ import SwiftUI
 
 struct FYPPage: View {
     var isBdayPage = false
-    var center_offset: CGFloat = -36
+    var center_offset: CGFloat = -170
 
     // Computed property to generate a random color
     var randomColor: Color {
@@ -20,11 +20,12 @@ struct FYPPage: View {
             // Conditionally show the background based on `isBdayPage`
             if isBdayPage {
 
-                Image("bday_background") // Ensure you have an image named "birthdayBackground" in your assets
+                Image("new_background") // Ensure you have an image named "birthdayBackground" in your assets
                     .resizable()
                     .edgesIgnoringSafeArea(.all)
+                    .padding(.bottom, 50.0)
 
-                VStack{
+                ZStack{
                     ZStack{
                         Image("bday_title")
                             .resizable()
@@ -46,6 +47,37 @@ struct FYPPage: View {
                             .frame(width: 325, height: 200)
                             //.background(.pink)
                             .offset(y: 120 + center_offset)
+                    }
+
+                    VStack{
+                        Spacer()
+                        VStack{
+
+                            ScrollView(.horizontal) {
+                                HStack{
+                                    product_card_view(
+                                        imageName: "product_2",
+                                        titleDescription: "Argentina National Football Team Soccer Jersey",
+                                        priceText: "38.99")
+
+                                    product_card_view(
+                                        imageName: "product_3",
+                                        titleDescription: "Bellroy Venture Sling 9L Explorer bag",
+                                        saleText: "Flash Sale ⚡️",
+
+                                        priceText: "38.99")
+
+                                    product_card_view(
+                                        imageName: "product_1",
+                                        titleDescription: "Adidas Predator Elite FG football boots",
+                                        saleText: "Ad",
+                                        priceText: "79.99")
+                                }
+                            }
+                            .scrollIndicators(.never)
+                    }
+                    .padding(.top, 40.0)
+                    .padding(.bottom, 100)
                     }
                 }
             } else {
