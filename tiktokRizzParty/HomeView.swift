@@ -9,7 +9,11 @@ import SwiftUI
 
 // Main view for the home screen
 struct HomeView: View {
+
+    @State private var tabBarHeight: CGFloat = 0
+
     var body: some View {
+
         // Using SwipeView to create a swipeable view with different colored pages
         SwipeView(pages: [
             FYPPage(isBdayPage: false),
