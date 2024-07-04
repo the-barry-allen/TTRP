@@ -14,10 +14,10 @@ struct Product {
 }
 
 let products = [
-    Product(name: "Blue and White Sneakers NEW", item: "ShopViewSampleProduct" , price: "$69.99"),
-    Product(name: "Blue and White Sneakers OLD", item: "ShopViewSampleProduct" , price: "$69.99"),
-    Product(name: "Blue and White Sneakers What", item: "ShopViewSampleProduct" , price: "$69.99"),
-    Product(name: "Blue and White Sneakers Fuck", item: "ShopViewSampleProduct" , price: "$69.99"),
+    Product(name: "Blue and White Sneakers", item: "ShopViewSampleProduct" , price: "69.99"),
+    Product(name: "Blue and White Sneakers1", item: "ShopViewSampleProduct" , price: "69.99"),
+    Product(name: "Blue and White Sneakers2", item: "ShopViewSampleProduct" , price: "69.99"),
+    Product(name: "Blue and White Sneakers3", item: "ShopViewSampleProduct" , price: "69.99"),
    
     
 ]
@@ -179,12 +179,10 @@ struct TopPicksView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
                     ForEach(products, id: \.name) { product in
-                        ProductView(imageName: product.item , price: product.price)
+                        shortlist_card_view(imageName: product.item, likes: 5, priceText: product.price)
                     }
                 }
-                .padding(.horizontal)
             }
-            .padding(.horizontal)
             .cornerRadius(10)
         }
     }
@@ -218,14 +216,14 @@ struct RecoItemsView: View {
         Text("Recommended Items")
             .font(.title)
             .padding(.horizontal)
-            .foregroundColor(.gray)
+            .foregroundColor(.white)
     let adaptiveColumns = [
         GridItem(.adaptive(minimum: 170))
         ]
 
         LazyVGrid(columns: adaptiveColumns, spacing: 20) {
             ForEach(products, id: \.name) { product in
-                RecommendedItemView(imageName: product.item, title: product.name, price: product.price)
+                product_card_view(imageName: product.item, titleDescription: product.name, priceText: product.price)
             }
         }
     }
