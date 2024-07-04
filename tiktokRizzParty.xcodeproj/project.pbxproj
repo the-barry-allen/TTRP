@@ -19,6 +19,7 @@
 		85FEA7532C2E8E6400189C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85FEA7522C2E8E6400189C98 /* Assets.xcassets */; };
 		85FEA7562C2E8E6400189C98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85FEA7552C2E8E6400189C98 /* Preview Assets.xcassets */; };
 		A5E93F9C2C368F79002B5164 /* shortlist_card_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E93F9B2C368F79002B5164 /* shortlist_card_view.swift */; };
+		A5E93F9F2C36FEAF002B5164 /* Friend_Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E93F9E2C36FEAF002B5164 /* Friend_Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		85FEA7522C2E8E6400189C98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85FEA7552C2E8E6400189C98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A5E93F9B2C368F79002B5164 /* shortlist_card_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shortlist_card_view.swift; sourceTree = "<group>"; };
+		A5E93F9E2C36FEAF002B5164 /* Friend_Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend_Page.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				855856B12C3250FF0065DF48 /* HomeView.swift */,
 				855856BB2C33ECED0065DF48 /* FYP_Pages */,
 				855856B32C32516B0065DF48 /* ShopView.swift */,
+				A5E93F9E2C36FEAF002B5164 /* Friend_Page.swift */,
 				855856B52C3251990065DF48 /* UploadView.swift */,
 				855856B72C3251EE0065DF48 /* MessagesView.swift */,
 				855856B92C3251F50065DF48 /* ProfileView.swift */,
@@ -173,6 +176,7 @@
 				855856B62C3251990065DF48 /* UploadView.swift in Sources */,
 				855856B82C3251EE0065DF48 /* MessagesView.swift in Sources */,
 				855856C12C34F4990065DF48 /* product_card_view.swift in Sources */,
+				A5E93F9F2C36FEAF002B5164 /* Friend_Page.swift in Sources */,
 				85FEA7512C2E8E6300189C98 /* ContentView.swift in Sources */,
 				A5E93F9C2C368F79002B5164 /* shortlist_card_view.swift in Sources */,
 				855856B42C32516B0065DF48 /* ShopView.swift in Sources */,

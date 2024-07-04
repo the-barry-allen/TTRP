@@ -37,11 +37,11 @@ struct ShopView: View {
                 }
             }
             .background(.black)
-        
     }
 }
 
 struct ShoppingListHeader: View {
+    @State private var showDrawer = false
     var body: some View {
         HStack {
             Image(systemName: "chevron.left")
@@ -65,10 +65,16 @@ struct ShoppingListHeader: View {
                     .padding(EdgeInsets(top: 20, leading: 30, bottom: 0, trailing: 0))// Smaller size for the plus
                 
             }
+            .onTapGesture {
+                showDrawer.toggle()
+            }
         }
         .padding()
         .frame(height: 30)
         .foregroundColor(.white)
+        .sheet(isPresented: $showDrawer) {
+            FriendView()
+        }
     }
 }
 

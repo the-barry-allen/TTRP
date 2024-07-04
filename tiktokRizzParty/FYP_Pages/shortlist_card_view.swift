@@ -31,7 +31,6 @@ struct shortlist_card_view: View {
                         .foregroundColor(.pink)
                         .padding(.horizontal, 6)
                         .padding(.vertical, 4)
-                        .background(.thinMaterial)
                         .cornerRadius(4)
                         .padding([.bottom, .trailing], 5)
                     Spacer()
