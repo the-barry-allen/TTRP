@@ -22,9 +22,9 @@ struct shortlist_card_view: View {
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: cardWidth)
-                            //.padding(.top, 12.0)
-                HStack{
-                    
+
+                HStack(alignment: .center, spacing: 0){
+
                     Text("$\(priceText)")
                         .font(.caption)
                         .fontWeight(.bold)
@@ -32,18 +32,23 @@ struct shortlist_card_view: View {
                         .padding(.horizontal, 6)
                         .padding(.vertical, 4)
                         .cornerRadius(4)
-                        .padding([.bottom, .trailing], 5)
+                        .padding([.bottom], 5)
+
                     Spacer()
+
                     Text(String(likes))
                         .font(.caption)
                         .fontWeight(.bold)
                         .foregroundColor(.black)
-                        .padding(.vertical, 4)
+                        .padding(.bottom, 5)
+                        .padding(.trailing, 4)
+
                     Image(systemName: "hand.thumbsup.fill")
                         .font(.caption)
                         .foregroundColor(.black)
-                        .padding(.trailing, 6)
-                        .padding(.vertical, 4)
+                        //.padding(.vertical, 4)
+                        .padding([.trailing], 6)
+                        .padding([.bottom], 8)
                 }
                     }.frame(width: cardWidth)
 
@@ -57,5 +62,5 @@ struct shortlist_card_view: View {
 }
 
 #Preview {
-    FYPPage(isBdayPage: true)
+    ShopView()
 }

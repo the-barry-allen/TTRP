@@ -18,8 +18,6 @@ let products = [
     Product(name: "Blue and White Sneakers1", item: "ShopViewSampleProduct" , price: "69.99"),
     Product(name: "Blue and White Sneakers2", item: "ShopViewSampleProduct" , price: "69.99"),
     Product(name: "Blue and White Sneakers3", item: "ShopViewSampleProduct" , price: "69.99"),
-   
-    
 ]
 
 struct ShopView: View {
@@ -30,10 +28,10 @@ struct ShopView: View {
                     VStack(alignment: .leading) {
                         SearchBar()
                         FilterContainer()
-                        TopPicksView()
+                        ShortlistView()
                         RecoItemsView(products: products)
                     }
-                    .padding()
+                    //.padding()
                 }
             }
             .background(.black)
@@ -46,7 +44,7 @@ struct ShoppingListHeader: View {
         HStack {
             Image(systemName: "chevron.left")
                 .font(.system(size: 20))
-            Spacer()
+            
             Text("KUSHAL'S SHOPPING LIST")
                 .font(.system(size: 20))
                 .bold()
@@ -55,19 +53,37 @@ struct ShoppingListHeader: View {
 //                .minimumScaleFactor(0.01)
 //                .lineLimit(1)
             Spacer()
-            ZStack {
-                Image(systemName: "person.2")
-                    .font(.system(size: 20))
-                
-                Image(systemName: "plus")
-                    .font(.system(size: 10))
-                    .bold()
-                    .padding(EdgeInsets(top: 20, leading: 30, bottom: 0, trailing: 0))// Smaller size for the plus
-                
-            }
-            .onTapGesture {
+            Button(action: {
+
                 showDrawer.toggle()
-            }
+            }, label: {
+                HStack {
+
+                    ZStack {
+                        Image(systemName: "person.2")
+                            .bold()
+                            .font(.system(size: 20))
+
+                        Image(systemName: "plus")
+                            .bold()
+                            .font(.system(size: 10))
+                            .bold()
+                            .padding(EdgeInsets(top: 20, leading: 30, bottom: 0, trailing: 0))// Smaller size for the plus
+
+                    }
+                }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 8)
+                .background(Color.pink)
+                .cornerRadius(20)
+                .shadow(color: Color.pink.opacity(0.6), radius: 10, x: 0, y: 0) // Glow effect
+                .scaleEffect(1.1) // Make the button slightly larger
+            })
+            .buttonStyle(PlainButtonStyle()) // Ensures the button keeps the custom style
+            .animation(.easeInOut(duration: 0.2), value: 1.0) // Animation for smooth interaction
+
+
+
         }
         .padding()
         .frame(height: 30)
@@ -98,24 +114,28 @@ struct SearchBar: View {
     }
 }
 
-struct TopPicksView: View {
+struct ShortlistView: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading, spacing: 8) {
             // Top Picks Section
-            Text("Shortlist")
-                .font(.title)
+            Text("Shortlisted Items")
+                .font(.title2)
+                .fontWeight(.bold)
                 .padding(.horizontal)
                 .foregroundColor(.white)
-            
+
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 20) {
+                HStack(spacing: 16) {
                     ForEach(products, id: \.name) { product in
                         shortlist_card_view(imageName: product.item, likes: 5, priceText: product.price)
                     }
                 }
             }
-            .cornerRadius(10)
+            //.cornerRadius(10)
         }
+        .padding(.horizontal)
+        .padding(.vertical, 12)
+        .background(.thinMaterial.opacity(0.2))
     }
 }
 
@@ -143,11 +163,14 @@ struct RecoItemsView: View {
     let products: [Product]
     
     var body: some View {
+
         // Recommended Items Section
-        Text("Recommended Items")
+        Text("Kushal Might Like")
             .font(.title)
+            .fontWeight(.bold)
             .padding(.horizontal)
             .foregroundColor(.white)
+
     let adaptiveColumns = [
         GridItem(.adaptive(minimum: 170))
         ]

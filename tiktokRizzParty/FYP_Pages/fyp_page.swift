@@ -44,7 +44,7 @@ struct FYPPage: View {
                                 selectedTab = 1
                             }, label: {
                                 HStack {
-                                    Text("More reccomendations")
+                                    Text("Shop for a B'day Gift")
                                         .foregroundColor(.white)
                                         .font(.headline)
                                     Image(systemName: "arrow.right")
