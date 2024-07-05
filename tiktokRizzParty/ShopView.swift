@@ -29,7 +29,7 @@ struct ShopView: View {
                 ScrollView {
                     VStack(alignment: .leading) {
                         SearchBar()
-                        TabberView()
+                        FilterContainer()
                         TopPicksView()
                         RecoItemsView(products: products)
                     }
@@ -95,81 +95,6 @@ struct SearchBar: View {
                             .foregroundColor(.gray)
             
         }
-    }
-}
-
-struct TabberView: View {
-    var body: some View {
-        VStack {
-            // Scrollable View with Page Indicators
-            TabView {
-                BrowseListContainer()
-                CollaborationCardView()
-                // Add more views here if needed
-            }
-            .tabViewStyle(PageTabViewStyle())
-            .frame(height: 200) // Adjust the height as needed
-        }
-    }
-}
-
-struct CollaborationCardView: View {
-    var body: some View {
-        VStack{
-            HStack {
-                Text("Collaboration Made Easy")
-                    .font(.system(size: 20))
-                    .bold()
-                    .padding()
-                Spacer()
-                ZStack {
-                    Image(systemName: "person.2")
-                        .font(.system(size: 20))
-                    
-                    Image(systemName: "plus")
-                        .font(.system(size: 10))
-                        .bold()
-                        .padding(EdgeInsets(top: 20, leading: 30, bottom: 0, trailing: 0))// Smaller size for the plus
-                    
-                }
-                    .frame(width: 100, height: 50)
-                    .background(Color(.systemGray4))
-                    .cornerRadius(10)
-                    .padding()
-            }
-            Text("Add friends to shop on the same list, so everyone is on the same page!")
-                .font(.system(size: 15))
-                .padding(EdgeInsets(top: 0, leading: 5, bottom: 5, trailing: 5))
-        }
-        .frame(height: 180)
-        .background(.gray)
-        .cornerRadius(10)
-        .padding()
-    }
-}
-struct BrowseListContainer: View {
-    var body: some View {
-        VStack{
-            HStack {
-                Text("Browse shortlisted items")
-                    .font(.system(size: 20))
-                    .bold()
-                    .padding()
-                Spacer()
-                Text("Go to list")
-                    .frame(width: 100, height: 50)
-                    .background(Color(.systemGray4))
-                    .cornerRadius(10)
-                    .padding()
-            }
-            Text("Need inspiration on what to buy? Take a look at what others have shortlisted!")
-                .font(.system(size: 15))
-                .padding(EdgeInsets(top: 0, leading: 5, bottom: 5, trailing: 5))
-        }
-        .frame(height: 180)
-        .background(.gray)
-        .cornerRadius(10)
-        .padding()
     }
 }
 
