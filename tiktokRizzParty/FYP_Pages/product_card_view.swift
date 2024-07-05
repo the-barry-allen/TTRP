@@ -68,5 +68,5 @@ struct product_card_view: View {
 }
 
 #Preview {
-    FYPPage(isBdayPage: true)
+    FYPPage(isBdayPage: true, selectedTab: .constant(0))
 }

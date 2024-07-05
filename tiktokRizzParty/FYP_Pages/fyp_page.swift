@@ -8,7 +8,8 @@ import SwiftUI
 
 struct FYPPage: View {
     var isBdayPage = false
-    var center_offset: CGFloat = -170
+    var centre_offset: CGFloat = -170
+    @Binding var selectedTab: Int
 
     // Computed property to generate a random color
     var randomColor: Color {
@@ -20,38 +21,47 @@ struct FYPPage: View {
             // Conditionally show the background based on `isBdayPage`
             if isBdayPage {
 
-                Image("new_background") // Ensure you have an image named "birthdayBackground" in your assets
+                Image("new_background")
                     .resizable()
                     .edgesIgnoringSafeArea(.all)
                     .padding(.bottom, 50.0)
 
+                Color.black.edgesIgnoringSafeArea(.all).opacity(0.3)
+
                 ZStack{
-                    ZStack{
-                        Image("bday_title")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 360, height: 190)
-                            //.background(.pink)
-                            .offset(y: -140 + center_offset)
+                    // the area with the profile pic and the text above and below the profile pic
+                    ProfileCardView(centre_offset: centre_offset)
 
-                        Image("profile_pic")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .clipShape(.circle)
-                            .frame(width: 225)
-                            .offset(y: -20 + center_offset)
 
-                        Image("deadline_text")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 325, height: 200)
-                            //.background(.pink)
-                            .offset(y: 120 + center_offset)
-                    }
-
-                    VStack{
+                    VStack(alignment: .center){
                         Spacer()
+
                         VStack{
+
+                            Button(action: {
+                                // TODO: send to shopping page
+                                print("YEAH SEND U TO SHOPPING PAGE")
+                                selectedTab = 1
+                            }, label: {
+                                HStack {
+                                    Text("More reccomendations")
+                                        .foregroundColor(.white)
+                                        .font(.headline)
+                                    Image(systemName: "arrow.right")
+                                        .foregroundColor(.white)
+                                        .font(.headline)
+                                }
+                                .padding(.horizontal, 16)
+                                .padding(.vertical, 8)
+                                .background(Color.pink)
+                                .cornerRadius(20)
+                                .shadow(color: Color.pink.opacity(0.6), radius: 10, x: 0, y: 0) // Glow effect
+                                .scaleEffect(1.1) // Make the button slightly larger
+                            })
+                            .buttonStyle(PlainButtonStyle()) // Ensures the button keeps the custom style
+                            .animation(.easeInOut(duration: 0.2), value: 1.0) // Animation for smooth interaction
+
+
 
                             ScrollView(.horizontal) {
                                 HStack{
@@ -74,10 +84,10 @@ struct FYPPage: View {
                                         priceText: "79.99")
                                 }
                             }
+                            .padding(.top, 4)
                             .scrollIndicators(.never)
                     }
-                    .padding(.top, 40.0)
-                    .padding(.bottom, 100)
+                    .padding(.bottom, 130)
                     }
                 }
             } else {
@@ -91,6 +101,6 @@ struct FYPPage: View {
 // Preview
 struct FYPPage_Previews: PreviewProvider {
     static var previews: some View {
-        FYPPage(isBdayPage: true) // Preview the birthday page
+        FYPPage(isBdayPage: true, selectedTab: .constant(0)) // Preview the birthday page
     }
 }

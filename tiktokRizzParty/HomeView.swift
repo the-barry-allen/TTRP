@@ -11,14 +11,15 @@ import SwiftUI
 struct HomeView: View {
 
     @State private var tabBarHeight: CGFloat = 0
+    @Binding var selectedTab: Int
 
     var body: some View {
 
         // Using SwipeView to create a swipeable view with different colored pages
         SwipeView(pages: [
-            FYPPage(isBdayPage: false),
-            FYPPage(isBdayPage: false),
-            FYPPage(isBdayPage: true)
+            FYPPage(isBdayPage: false, selectedTab: $selectedTab),
+            FYPPage(isBdayPage: false, selectedTab: $selectedTab),
+            FYPPage(isBdayPage: true, selectedTab: $selectedTab)
         ])
     }
 }
