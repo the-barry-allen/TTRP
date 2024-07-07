@@ -6,6 +6,7 @@
 //
 import SwiftUI
 
+// MARK: - FYPPage: View for displaying For You Page (FYP) content
 struct FYPPage: View {
     var isBdayPage = false
     var centre_offset: CGFloat = -170
@@ -20,29 +21,25 @@ struct FYPPage: View {
         ZStack {
             // Conditionally show the background based on `isBdayPage`
             if isBdayPage {
-
+                // Birthday page background image
                 Image("new_background")
                     .resizable()
                     .edgesIgnoringSafeArea(.all)
                     .padding(.bottom, 50.0)
 
+                // Semi-transparent overlay
                 Color.black.edgesIgnoringSafeArea(.all).opacity(0.3)
 
-                ZStack{
-                    // the area with the profile pic and the text above and below the profile pic
+                ZStack {
+                    // Profile card view with a central offset
                     ProfileCardView(centre_offset: centre_offset)
 
-
-                    VStack(alignment: .center){
+                    VStack(alignment: .center) {
                         Spacer()
 
-                        VStack{
-
-                            Button(action: {
-                                // TODO: send to shopping page
-                                print("YEAH SEND U TO SHOPPING PAGE")
-                                selectedTab = 1
-                            }, label: {
+                        VStack {
+                            // Navigation link to the shop view
+                            NavigationLink(destination: ShopView()) {
                                 HStack {
                                     Text("Shop for a B'day Gift")
                                         .foregroundColor(.white)
@@ -57,50 +54,61 @@ struct FYPPage: View {
                                 .cornerRadius(20)
                                 .shadow(color: Color.pink.opacity(0.6), radius: 10, x: 0, y: 0) // Glow effect
                                 .scaleEffect(1.1) // Make the button slightly larger
-                            })
-                            .buttonStyle(PlainButtonStyle()) // Ensures the button keeps the custom style
-                            .animation(.easeInOut(duration: 0.2), value: 1.0) // Animation for smooth interaction
+                            }
 
-
-
+                            // Horizontal scroll view for product cards
                             ScrollView(.horizontal) {
-                                HStack{
-                                    product_card_view(
-                                        imageName: "product_2",
-                                        titleDescription: "Argentina National Football Team Soccer Jersey",
-                                        priceText: "38.99")
+                                HStack {
+                                    NavigationLink(destination: ShopView()) {
+                                        product_card_view(
+                                            imageName: "product_2",
+                                            titleDescription: "Argentina National Football Team Soccer Jersey",
+                                            priceText: "38.99"
+                                        )
+                                    }
 
-                                    product_card_view(
-                                        imageName: "product_3",
-                                        titleDescription: "Bellroy Venture Sling 9L Explorer bag",
-                                        saleText: "Flash Sale ⚡️",
+                                    NavigationLink(destination: ShopView()) {
+                                        product_card_view(
+                                            imageName: "product_3",
+                                            titleDescription: "Bellroy Venture Sling 9L Explorer bag",
+                                            saleText: "Flash Sale ⚡️",
+                                            priceText: "38.99"
+                                        )
+                                    }
 
-                                        priceText: "38.99")
-
-                                    product_card_view(
-                                        imageName: "product_1",
-                                        titleDescription: "Adidas Predator Elite FG football boots",
-                                        saleText: "Ad",
-                                        priceText: "79.99")
+                                    NavigationLink(destination: ShopView()) {
+                                        product_card_view(
+                                            imageName: "product_1",
+                                            titleDescription: "Adidas Predator Elite FG football boots",
+                                            saleText: "Ad",
+                                            priceText: "79.99"
+                                        )
+                                    }
                                 }
                             }
                             .padding(.top, 4)
                             .scrollIndicators(.never)
-                    }
-                    .padding(.bottom, 130)
+                        }
+                        .padding(.bottom, 130)
                     }
                 }
             } else {
+                // Random color background for non-birthday pages
                 randomColor
                     .edgesIgnoringSafeArea(.all) // Extend the color to the edges of the screen
+
+                // Text overlay for non-birthday pages
+                Text("Sample Video, Scroll to the next video ⬇️")
+                    .bold()
+                    .shadow(color: .white, radius: 10)
             }
         }
     }
 }
 
-// Preview
+// MARK: - Preview
 struct FYPPage_Previews: PreviewProvider {
     static var previews: some View {
-        FYPPage(isBdayPage: true, selectedTab: .constant(0)) // Preview the birthday page
+        FYPPage(isBdayPage: false, selectedTab: .constant(0)) // Preview the non-birthday page
     }
 }

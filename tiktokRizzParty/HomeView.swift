@@ -4,17 +4,14 @@
 //
 //  Created by Simantak Dabhade on 1/7/24.
 //
-
 import SwiftUI
 
-// Main view for the home screen
+// MARK: - HomeView: Main view for the home screen
 struct HomeView: View {
-
     @State private var tabBarHeight: CGFloat = 0
     @Binding var selectedTab: Int
 
     var body: some View {
-
         // Using SwipeView to create a swipeable view with different colored pages
         SwipeView(pages: [
             FYPPage(isBdayPage: false, selectedTab: $selectedTab),
@@ -24,7 +21,7 @@ struct HomeView: View {
     }
 }
 
-// Generic view that enables swiping between pages
+// MARK: - SwipeView: Generic view that enables swiping between pages
 struct SwipeView<Content: View>: View {
     var pages: [Content] // Array of pages to swipe through
     @State private var currentPage = 0 // State to track the current page
@@ -59,6 +56,7 @@ struct SwipeView<Content: View>: View {
     }
 }
 
+// Preview provider for SwiftUI previews
 #Preview {
     ContentView()
 }
