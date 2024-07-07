@@ -16,3 +16,5 @@ The parts of the demo that are built up are
 - The FYP (here you will see two demo 'video' pages after which kushal's bday card will come up)
 - The Custom Shopping Page (Kushal's custom shopping page)
 - The default shopping page (to show how a user will swap between the different shopping pages)
+
+There may be limited functionality in some parts of this demo as it is a stand alaong prototype. 
