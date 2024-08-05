@@ -19,9 +19,18 @@ struct HomeView: View {
     // Function to generate an array of pages dynamically
     private func generatePages() -> [AnyView] {
         return [
-            AnyView(FYPPage(isBdayPage: false, selectedTab: $selectedTab)),
-            AnyView(FYPPage(isBdayPage: false, selectedTab: $selectedTab)),
-            AnyView(FYPPage(isBdayPage: true, selectedTab: $selectedTab))
+            AnyView(FYPPage(isBdayPage: false, videoT: "random1", selectedTab: $selectedTab)),
+            AnyView(FYPPage(isBdayPage: false, videoT: "ad3", selectedTab: $selectedTab)),
+            AnyView(FYPPage(isBdayPage: false, videoT: "random2", selectedTab: $selectedTab)),
+            AnyView(FYPPage(isBdayPage: false, videoT: "ad1", selectedTab: $selectedTab)),
+            AnyView(FYPPage(isBdayPage: true, selectedTab: $selectedTab)),
+            AnyView(FYPPage(isBdayPage: false, videoT: "random4", selectedTab: $selectedTab)),
+            AnyView(FYPPage(isBdayPage: false, videoT: "ad4", selectedTab: $selectedTab)),
+            AnyView(FYPPage(isBdayPage: false, videoT: "random3", selectedTab: $selectedTab)),
+            AnyView(FYPPage(isBdayPage: false, videoT: "ad2", selectedTab: $selectedTab)),
+            AnyView(FYPPage(isBdayPage: true, selectedTab: $selectedTab)),
+            AnyView(FYPPage(isBdayPage: false, videoT: "random5", selectedTab: $selectedTab)),
+            AnyView(FYPPage(isBdayPage: false, videoT: "ad3", selectedTab: $selectedTab)),
         ]
     }
 }

@@ -13,13 +13,14 @@ import SwiftUI
 struct FYPPage: View {
     var isBdayPage = false
     var centre_offset: CGFloat = -170
+    var videoT = ""
     @Binding var selectedTab: Int
 
     var body: some View {
         if isBdayPage {
             BirthdayPageView(centre_offset: centre_offset, selectedTab: $selectedTab)
         } else {
-            NonBirthdayPageView()
+            NonBirthdayPageView(videoT: videoT)
         }
     }
 }
