@@ -26,7 +26,7 @@ struct ShoppingListHeader: View {
 
             // Title texts
             VStack(alignment: .leading) {
-                Text("KUSHAL'S")
+                Text("Lin Tao's")
                     .fontWeight(.black)
                     .font(.system(size: 32))
                     .multilineTextAlignment(.leading)

@@ -19,6 +19,10 @@
 		855856C82C3A4DE70065DF48 /* ShortlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855856C72C3A4DE70065DF48 /* ShortlistView.swift */; };
 		855856CA2C3A50CE0065DF48 /* RecoItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855856C92C3A50CE0065DF48 /* RecoItemsView.swift */; };
 		855856CC2C3A745E0065DF48 /* DefaultShopPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855856CB2C3A745E0065DF48 /* DefaultShopPage.swift */; };
+		85F57D432C60C19C009AA610 /* CircularTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F57D422C60C19C009AA610 /* CircularTextView.swift */; };
+		85F57D472C60D94A009AA610 /* BirthdayPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F57D462C60D94A009AA610 /* BirthdayPageView.swift */; };
+		85F57D492C60DB88009AA610 /* NonBirthdayPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F57D482C60DB88009AA610 /* NonBirthdayPageView.swift */; };
+		85F57D4B2C60DD7B009AA610 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F57D4A2C60DD7B009AA610 /* LoadingView.swift */; };
 		85FEA74F2C2E8E6300189C98 /* tiktokRizzPartyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FEA74E2C2E8E6300189C98 /* tiktokRizzPartyApp.swift */; };
 		85FEA7512C2E8E6300189C98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FEA7502C2E8E6300189C98 /* ContentView.swift */; };
 		85FEA7532C2E8E6400189C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85FEA7522C2E8E6400189C98 /* Assets.xcassets */; };
@@ -50,6 +54,10 @@
 		855856C72C3A4DE70065DF48 /* ShortlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortlistView.swift; sourceTree = "<group>"; };
 		855856C92C3A50CE0065DF48 /* RecoItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoItemsView.swift; sourceTree = "<group>"; };
 		855856CB2C3A745E0065DF48 /* DefaultShopPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultShopPage.swift; sourceTree = "<group>"; };
+		85F57D422C60C19C009AA610 /* CircularTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTextView.swift; sourceTree = "<group>"; };
+		85F57D462C60D94A009AA610 /* BirthdayPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayPageView.swift; sourceTree = "<group>"; };
+		85F57D482C60DB88009AA610 /* NonBirthdayPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonBirthdayPageView.swift; sourceTree = "<group>"; };
+		85F57D4A2C60DD7B009AA610 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		85FEA74B2C2E8E6300189C98 /* tiktokRizzParty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tiktokRizzParty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85FEA74E2C2E8E6300189C98 /* tiktokRizzPartyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tiktokRizzPartyApp.swift; sourceTree = "<group>"; };
 		85FEA7502C2E8E6300189C98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,8 +92,11 @@
 			isa = PBXGroup;
 			children = (
 				855856BE2C33EDD40065DF48 /* fyp_page.swift */,
+				85F57D482C60DB88009AA610 /* NonBirthdayPageView.swift */,
+				85F57D462C60D94A009AA610 /* BirthdayPageView.swift */,
 				855856C22C380F290065DF48 /* ProfileCardView.swift */,
 				855856C02C34F4990065DF48 /* product_card_view.swift */,
+				85F57D4A2C60DD7B009AA610 /* LoadingView.swift */,
 			);
 			path = FYP_Pages;
 			sourceTree = "<group>";
@@ -136,6 +147,7 @@
 				85FEA74E2C2E8E6300189C98 /* tiktokRizzPartyApp.swift */,
 				85FEA7502C2E8E6300189C98 /* ContentView.swift */,
 				855856B12C3250FF0065DF48 /* HomeView.swift */,
+				85F57D422C60C19C009AA610 /* CircularTextView.swift */,
 				855856BB2C33ECED0065DF48 /* FYP_Pages */,
 				855856C42C3A37630065DF48 /* Shop */,
 				855856B52C3251990065DF48 /* UploadView.swift */,
@@ -236,8 +248,12 @@
 			files = (
 				855856CC2C3A745E0065DF48 /* DefaultShopPage.swift in Sources */,
 				855856C32C380F290065DF48 /* ProfileCardView.swift in Sources */,
+				85F57D432C60C19C009AA610 /* CircularTextView.swift in Sources */,
 				855856B22C3250FF0065DF48 /* HomeView.swift in Sources */,
+				85F57D472C60D94A009AA610 /* BirthdayPageView.swift in Sources */,
+				85F57D4B2C60DD7B009AA610 /* LoadingView.swift in Sources */,
 				855856B62C3251990065DF48 /* UploadView.swift in Sources */,
+				85F57D492C60DB88009AA610 /* NonBirthdayPageView.swift in Sources */,
 				855856B82C3251EE0065DF48 /* MessagesView.swift in Sources */,
 				855856CA2C3A50CE0065DF48 /* RecoItemsView.swift in Sources */,
 				855856C12C34F4990065DF48 /* product_card_view.swift in Sources */,
@@ -390,8 +406,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,9 +415,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.pirateship.tiktokRizzParty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -419,8 +439,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -428,9 +448,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.pirateship.tiktokRizzParty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

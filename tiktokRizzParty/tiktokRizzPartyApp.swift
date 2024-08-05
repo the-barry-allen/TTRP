@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+
+class appSettings {
+    var videoCount: Int = 10
+}
+
 @main
 struct tiktokRizzPartyApp: App {
     var body: some Scene {

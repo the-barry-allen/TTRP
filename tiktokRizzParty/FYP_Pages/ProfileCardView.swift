@@ -12,27 +12,40 @@ struct ProfileCardView: View {
 
     var body: some View {
         ZStack {
-            // Background title image
-            Image("bday_title")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 360, height: 190)
-                .offset(y: -140 + centre_offset)
 
             // Profile picture image
-            Image("kushal_pic")
+            Image("LinTaoProfilePic")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .clipShape(.circle)
-                .frame(width: 225)
-                .offset(y: -20 + centre_offset)
+                .frame(width: 200)
+                .offset(y: -35 + centre_offset)
 
-            // Deadline text image
-            Image("deadline_text")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 305, height: 190)
-                .offset(y: 110 + centre_offset)
+
+
+            CircularTextView(title: "🎉 Lin Tao's B'day 🎁",
+                             width: 295,
+                             height: 295,
+                             radius: 160,
+                             fontSize: 35
+            ).offset(y: -30 + centre_offset)
+
+            VStack{
+                Text("August 24th")
+                    .font(.title)
+                    .bold()
+                    .foregroundStyle(.white)
+                    .shadow(color: .pink, radius: 20)
+
+                Text("in 15 days!")
+                    .font(.title2)
+                    .bold()
+                    .foregroundColor(.pink)
+                    .shadow(color: .cyan, radius: 20)
+
+            }
+            .offset(y: 110 + centre_offset)
+
         }
     }
 }
