@@ -82,7 +82,7 @@ struct BirthdayPageView: View {
                         .padding(.top, 4)
                         .scrollIndicators(.never)
                     }
-                    .padding(.bottom, 40)
+                    .padding(.bottom, 140)
                 }
             }
         }
