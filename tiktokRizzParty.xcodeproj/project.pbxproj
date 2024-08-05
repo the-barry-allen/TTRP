@@ -26,6 +26,15 @@
 		A5E93F9C2C368F79002B5164 /* shortlist_card_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E93F9B2C368F79002B5164 /* shortlist_card_view.swift */; };
 		A5E93F9F2C36FEAF002B5164 /* Friend_Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E93F9E2C36FEAF002B5164 /* Friend_Page.swift */; };
 		A5E93FA12C380CAF002B5164 /* Filter_Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E93FA02C380CAF002B5164 /* Filter_Container.swift */; };
+		A5F7DD712C60D73800F73A51 /* random5.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5F7DD682C60D73800F73A51 /* random5.mov */; };
+		A5F7DD722C60D73800F73A51 /* random1.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5F7DD692C60D73800F73A51 /* random1.mov */; };
+		A5F7DD732C60D73800F73A51 /* ad2.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5F7DD6A2C60D73800F73A51 /* ad2.mov */; };
+		A5F7DD742C60D73800F73A51 /* random2.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5F7DD6B2C60D73800F73A51 /* random2.mov */; };
+		A5F7DD752C60D73800F73A51 /* ad1.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5F7DD6C2C60D73800F73A51 /* ad1.mov */; };
+		A5F7DD762C60D73800F73A51 /* random4.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5F7DD6D2C60D73800F73A51 /* random4.mov */; };
+		A5F7DD772C60D73800F73A51 /* ad4.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5F7DD6E2C60D73800F73A51 /* ad4.mov */; };
+		A5F7DD782C60D73800F73A51 /* random3.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5F7DD6F2C60D73800F73A51 /* random3.mov */; };
+		A5F7DD792C60D73800F73A51 /* ad3.mov in Resources */ = {isa = PBXBuildFile; fileRef = A5F7DD702C60D73800F73A51 /* ad3.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,11 +53,20 @@
 		85FEA74B2C2E8E6300189C98 /* tiktokRizzParty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tiktokRizzParty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85FEA74E2C2E8E6300189C98 /* tiktokRizzPartyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tiktokRizzPartyApp.swift; sourceTree = "<group>"; };
 		85FEA7502C2E8E6300189C98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		85FEA7522C2E8E6400189C98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85FEA7522C2E8E6400189C98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = /Users/malla/hackathon/TTRP/tiktokRizzParty/Assets.xcassets; sourceTree = "<absolute>"; };
 		85FEA7552C2E8E6400189C98 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A5E93F9B2C368F79002B5164 /* shortlist_card_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shortlist_card_view.swift; sourceTree = "<group>"; };
 		A5E93F9E2C36FEAF002B5164 /* Friend_Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend_Page.swift; sourceTree = "<group>"; };
 		A5E93FA02C380CAF002B5164 /* Filter_Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter_Container.swift; sourceTree = "<group>"; };
+		A5F7DD682C60D73800F73A51 /* random5.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = random5.mov; path = ../../../Downloads/random5.mov; sourceTree = "<group>"; };
+		A5F7DD692C60D73800F73A51 /* random1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = random1.mov; path = ../../../Downloads/random1.mov; sourceTree = "<group>"; };
+		A5F7DD6A2C60D73800F73A51 /* ad2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = ad2.mov; path = ../../../Downloads/ad2.mov; sourceTree = "<group>"; };
+		A5F7DD6B2C60D73800F73A51 /* random2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = random2.mov; path = ../../../Downloads/random2.mov; sourceTree = "<group>"; };
+		A5F7DD6C2C60D73800F73A51 /* ad1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = ad1.mov; path = ../../../Downloads/ad1.mov; sourceTree = "<group>"; };
+		A5F7DD6D2C60D73800F73A51 /* random4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = random4.mov; path = ../../../Downloads/random4.mov; sourceTree = "<group>"; };
+		A5F7DD6E2C60D73800F73A51 /* ad4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = ad4.mov; path = ../../../Downloads/ad4.mov; sourceTree = "<group>"; };
+		A5F7DD6F2C60D73800F73A51 /* random3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = random3.mov; path = ../../../Downloads/random3.mov; sourceTree = "<group>"; };
+		A5F7DD702C60D73800F73A51 /* ad3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = ad3.mov; path = ../../../Downloads/ad3.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +124,15 @@
 		85FEA74D2C2E8E6300189C98 /* tiktokRizzParty */ = {
 			isa = PBXGroup;
 			children = (
+				A5F7DD6C2C60D73800F73A51 /* ad1.mov */,
+				A5F7DD6A2C60D73800F73A51 /* ad2.mov */,
+				A5F7DD702C60D73800F73A51 /* ad3.mov */,
+				A5F7DD6E2C60D73800F73A51 /* ad4.mov */,
+				A5F7DD692C60D73800F73A51 /* random1.mov */,
+				A5F7DD6B2C60D73800F73A51 /* random2.mov */,
+				A5F7DD6F2C60D73800F73A51 /* random3.mov */,
+				A5F7DD6D2C60D73800F73A51 /* random4.mov */,
+				A5F7DD682C60D73800F73A51 /* random5.mov */,
 				85FEA74E2C2E8E6300189C98 /* tiktokRizzPartyApp.swift */,
 				85FEA7502C2E8E6300189C98 /* ContentView.swift */,
 				855856B12C3250FF0065DF48 /* HomeView.swift */,
@@ -186,8 +213,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F7DD762C60D73800F73A51 /* random4.mov in Resources */,
+				A5F7DD742C60D73800F73A51 /* random2.mov in Resources */,
+				A5F7DD712C60D73800F73A51 /* random5.mov in Resources */,
+				A5F7DD722C60D73800F73A51 /* random1.mov in Resources */,
 				85FEA7562C2E8E6400189C98 /* Preview Assets.xcassets in Resources */,
+				A5F7DD732C60D73800F73A51 /* ad2.mov in Resources */,
+				A5F7DD792C60D73800F73A51 /* ad3.mov in Resources */,
+				A5F7DD772C60D73800F73A51 /* ad4.mov in Resources */,
+				A5F7DD752C60D73800F73A51 /* ad1.mov in Resources */,
 				85FEA7532C2E8E6400189C98 /* Assets.xcassets in Resources */,
+				A5F7DD782C60D73800F73A51 /* random3.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
