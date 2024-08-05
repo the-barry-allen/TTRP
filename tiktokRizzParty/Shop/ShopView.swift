@@ -8,7 +8,8 @@
 import SwiftUI
 
 // MARK: - Product Model
-struct Product {
+struct Product: Identifiable {
+    let id = UUID()
     let name: String
     let item: String
     let price: String
@@ -54,65 +55,73 @@ struct ShopView: View {
                 }
             }
         }
-        .background(Color.black)
+        .background(Color.black.edgesIgnoringSafeArea(.all))
         .navigationBarHidden(true)
-    }
-}
-
-// MARK: - ProductView: View for displaying an individual product
-struct ProductView: View {
-    var imageName: String
-    var price: String
-
-    var body: some View {
-        VStack(alignment: .leading) {
-            // Product image
-            Image(imageName)
-                .resizable()
-                .frame(width: 100, height: 100)
-                .cornerRadius(10)
-            // Product price
-            Text(price)
-        }
-        .padding()
-        .background(Color.white)
-        .cornerRadius(10)
-        .shadow(radius: 5)
     }
 }
 
 // MARK: - RecommendedItemView: View for displaying a recommended item
 struct RecommendedItemView: View {
-    var imageName: String
-    var title: String
-    var price: String
+    var product: Product
 
     var body: some View {
-        VStack {
+        HStack {
             // Recommended item image
-            Image(imageName)
+            Image(product.item)
                 .resizable()
                 .frame(width: 100, height: 100)
-            // Recommended item title
-            Text(title)
-                .font(.headline)
-            // Recommended item price
-            Text(price)
-                .font(.subheadline)
+                .cornerRadius(10)
+            VStack(alignment: .leading) {
+                // Recommended item title
+                Text(product.name)
+                    .font(.headline)
+                    .foregroundColor(.white)
+                // Recommended item price
+                Text(product.price)
+                    .font(.subheadline)
+                    .foregroundColor(.white)
+            }
             Spacer()
             // Add to cart button
             Button(action: {}) {
                 Image(systemName: "cart")
+                    .foregroundColor(.white)
                     .padding()
             }
         }
-        .frame(height: 200)
+        .background(Color.gray.opacity(0.2))
         .cornerRadius(10)
         .shadow(radius: 5)
     }
 }
 
+// MARK: - ProductDetailView: View for displaying product details
+struct ProductDetailView: View {
+    var product: Product
+
+    var body: some View {
+        VStack(alignment: .leading) {
+            // Product image
+            Image(product.item)
+                .resizable()
+                .frame(height: 300)
+                .cornerRadius(10)
+            Text(product.name)
+                .font(.largeTitle)
+                .padding(.top)
+            Text(product.price)
+                .font(.title)
+                .foregroundColor(.secondary)
+            Spacer()
+        }
+        .padding()
+        .navigationBarTitle(Text(product.name), displayMode: .inline)
+    }
+}
+
 // MARK: - Preview for ShopView
-#Preview {
-    ShopView()
+struct ShopView_Previews: PreviewProvider {
+    static var previews: some View {
+        ShopView()
+    }
 }
