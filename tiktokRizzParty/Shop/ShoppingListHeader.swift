@@ -81,9 +81,9 @@ struct ShoppingListHeader: View {
             .animation(.easeInOut(duration: 0.2), value: 1.0) // Animation for smooth interaction
         }
         .foregroundColor(.white)
-        .sheet(isPresented: $showDrawer) {
+        .fullScreenCover(isPresented: $showDrawer, content: {
             FriendView()
-        }
+        })
     }
 }
 

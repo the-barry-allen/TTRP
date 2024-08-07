@@ -18,9 +18,26 @@ struct FriendTile: Identifiable, Codable {
 struct FriendView: View {
     @State private var friends: [FriendTile] = loadFriends()
     @State private var dummyLink: String = "https://tiktok.link/share"
+    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
+            HStack {
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }) {
+                    HStack{
+                        Image(systemName: "chevron.left")
+                            .font(.system(size: 18))
+                            .padding(.leading, 4)
+                        Text("Back")
+                            .font(.system(size: 18))
+                            .padding(.leading, 2)
+                            .padding(.trailing, 8)
+                    }
+                }
+                Spacer()
+            }
             // Shareable Link Section
             VStack {
                 Text("Shareable Link")
