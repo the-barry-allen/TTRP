@@ -68,7 +68,7 @@
 		A5E93FA02C380CAF002B5164 /* Filter_Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter_Container.swift; sourceTree = "<group>"; };
 		A5F7DD682C60D73800F73A51 /* random5.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = random5.mov; path = ../../../Downloads/random5.mov; sourceTree = "<group>"; };
 		A5F7DD692C60D73800F73A51 /* random1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = random1.mov; path = ../../../Downloads/random1.mov; sourceTree = "<group>"; };
-		A5F7DD6A2C60D73800F73A51 /* ad2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = ad2.mov; path = ../../../Downloads/ad2.mov; sourceTree = "<group>"; };
+		A5F7DD6A2C60D73800F73A51 /* ad2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = ad2.mov; path = /Users/malla/hackathon/TTRP/tiktokRizzParty/../../../Downloads/ad2.mov; sourceTree = "<absolute>"; };
 		A5F7DD6B2C60D73800F73A51 /* random2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = random2.mov; path = ../../../Downloads/random2.mov; sourceTree = "<group>"; };
 		A5F7DD6C2C60D73800F73A51 /* ad1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = ad1.mov; path = ../../../Downloads/ad1.mov; sourceTree = "<group>"; };
 		A5F7DD6D2C60D73800F73A51 /* random4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = random4.mov; path = ../../../Downloads/random4.mov; sourceTree = "<group>"; };
