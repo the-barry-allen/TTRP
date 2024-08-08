@@ -27,7 +27,6 @@ struct HomeView: View {
             AnyView(FYPPage(isBdayPage: false, videoT: "random4", selectedTab: $selectedTab)),
             AnyView(FYPPage(isBdayPage: false, videoT: "ad4", selectedTab: $selectedTab)),
             AnyView(FYPPage(isBdayPage: false, videoT: "random3", selectedTab: $selectedTab)),
-            AnyView(FYPPage(isBdayPage: false, videoT: "ad2", selectedTab: $selectedTab)),
             AnyView(FYPPage(isBdayPage: true, selectedTab: $selectedTab)),
             AnyView(FYPPage(isBdayPage: false, videoT: "random5", selectedTab: $selectedTab)),
             AnyView(FYPPage(isBdayPage: false, videoT: "ad3", selectedTab: $selectedTab)),

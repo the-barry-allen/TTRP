@@ -10,6 +10,7 @@ import SwiftUI
 struct FilterContainer: View {
     @State private var showDeliveryDateInfo = false
     @State private var showBudgetInfo = false
+    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         HStack(alignment: .center, spacing: 14.0) {
@@ -35,27 +36,11 @@ struct FilterContainer: View {
         }
         .padding(.horizontal, 20) // Add padding to the sides
         .frame(maxWidth: .infinity, alignment: .center) // Center the HStack
-        .sheet(isPresented: $showDeliveryDateInfo) {
-            VStack {
-                Text("Delivery Date Editor")
-                    .font(.title)
-                    .padding()
-
-                Text("Here the user would be able to edit their desired delivery date, however the default is set to the recipient's birthday that we know of! Recommendations made will check to make sure delivery can be made by this date.")
-                    .font(.headline)
-                    .padding()
-            }
+        .fullScreenCover(isPresented: $showDeliveryDateInfo) {
+            
         }
-        .sheet(isPresented: $showBudgetInfo) {
-            VStack {
-                Text("Budget Editor")
-                    .font(.title)
-                    .padding()
-
-                Text("Here the user would be able to change the desired shopping budget for the group. You can set a contribution amount per person, or set a total budget. Recommendations on the other page are made to be within this budget.")
-                    .font(.headline)
-                    .padding()
-            }
+        .fullScreenCover(isPresented: $showBudgetInfo) {
+            BudgetPage()
         }
     }
 }

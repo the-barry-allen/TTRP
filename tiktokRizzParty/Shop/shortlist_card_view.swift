@@ -12,7 +12,7 @@ struct shortlist_card_view: View {
     var likes: Int
     var priceText: String = "00.00"
 
-    let cardWidth: CGFloat = 120
+    let cardWidth: CGFloat = 140
     let cardHeight: CGFloat = 154
 
     var body: some View {
@@ -59,6 +59,7 @@ struct shortlist_card_view: View {
                         Image(systemName: "hand.thumbsup.fill")
                             .font(.caption)
                             .foregroundColor(.white)
+                            .padding(.bottom, 3)
                     }
                     .padding(.horizontal, 6)
                     .padding(.vertical, 4)
