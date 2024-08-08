@@ -37,7 +37,7 @@ struct FilterContainer: View {
         .padding(.horizontal, 20) // Add padding to the sides
         .frame(maxWidth: .infinity, alignment: .center) // Center the HStack
         .fullScreenCover(isPresented: $showDeliveryDateInfo) {
-            
+            DeliveryDatePage()
         }
         .fullScreenCover(isPresented: $showBudgetInfo) {
             BudgetPage()
