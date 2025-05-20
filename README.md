@@ -6,7 +6,7 @@ Hiii! This project was built around the goal of maximising the potential of the 
 
 Clicking on the call to action, then creates a custom shopping page for the occasion (Friends B'day for example) that utlises the data around the friends interest, the delivery date, location, type of occasion and price budget to produce highly relevant and promising reccomendations.
 
-Making these custom pages shareable via a link so groups of friends can access a page makes these custom pages even more power as groups of friends can now shortlist items, look through reccomendations and set a budget.
+Making these custom pages shareable via a link so groups of friends can access a page makes these custom pages even more power as groups of friends can now shortlist items, look through reccomendations and set a budget!
 
 ## Tech specs and How to Run (guide)
 To run our codebase, simple pull the repo, open it up on Xcode and run it either on an iOS simulator or an iPhone. Due to time constraints this demo was only built for and tested out on the folowing specs and is reccomended to be ran on this.
