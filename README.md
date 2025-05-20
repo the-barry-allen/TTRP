@@ -18,3 +18,6 @@ The parts of the demo that are built up are
 - The default shopping page (to show how a user will swap between the different shopping pages)
 
 There may be limited functionality in some parts of this demo as it is a stand alaong prototype. 
+
+
+made by the ttrp
